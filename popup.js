@@ -26,7 +26,7 @@ $(function() {
   function updatePrice() {
     var val = $("#idBase").val().replace(/,/, ".");
     var price = parseFloat(val);
-    var fee = (price * 0.019) + 0.35;
+    var fee = (price * 0.0249) + 0.35;
     var total = (price - fee);
     var total = total.toFixed(2);
     var fee = fee.toFixed(2);
@@ -37,7 +37,7 @@ $(function() {
   function reverseCalc() {
     var val = $("#idBaser").val().replace(/,/, ".");
     var price = parseFloat(val);
-    var fee = ((price + 0.35) / 0.9810) - price
+    var fee = ((price + 0.35) / 0.9751) - price
     var total = price + fee;
     var total = total.toFixed(2);
     var fee = fee.toFixed(2);
