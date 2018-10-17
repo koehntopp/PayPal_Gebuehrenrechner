@@ -1,0 +1,103 @@
+<!doctype html>
+<!--
+ This page is shown when the extension button is clicked, because the
+ "browser_action" field in manifest.json contains the "default_popup" key with
+ value "popup.html".
+ -->
+<html>
+  <head>
+    <title>PayPal Gebührenrechner</title>
+
+    <link rel="stylesheet" type="text/css" href="w2ui.min.css">
+
+    <style>
+      body {
+        font-family: "Segoe UI", "Lucida Grande", Tahoma, sans-serif;
+        font-size: 100%;
+      }
+
+      #status {
+        /* avoid an excessively wide status text */
+        white-space: pre;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        max-width: 400px;
+      }
+    </style>
+
+    <script src="jquery-3.2.1.min.js"></script>
+    <script src="w2ui.min.js"></script>
+    <script src="popup.js"></script>
+
+  </head>
+  
+  <body>
+  
+    <div id="form" style="width: 285px; height: 400px" align="left">
+
+      <div class="w2ui-page page-0" style="width: 285px; float: left; margin-right: 3px">
+
+        <div style="padding: 3px; font-weight: bold; color: #777;">Geb&uuml;hrenrechner</div>
+
+        <div class="w2ui-group" style="height: 115px; width: 260px">
+          
+          <div class="w2ui-field w2ui-span4">
+            <label>Geldeingang</label>
+            <div>
+              <input name="idBase" type="text" maxlength="50" size="20"/>
+            </div>
+          </div>
+          
+          <div class="w2ui-field w2ui-span4">
+              <label>Geb&uuml;hren</label>
+              <div>
+                  <input name="idFee" type="text" maxlength="50" size="20"/>
+              </div>
+          </div>
+
+          <div class="w2ui-field w2ui-span4">
+              <label>Endbetrag</label>
+              <div>
+                  <input name="idTotal" type="text" maxlength="50" size="20"/>
+              </div>
+          </div>
+
+        </div>
+
+        <div style="padding: 3px; font-weight: bold; color: #777;">R&uuml;ckw&auml;rtsrechner</div>
+
+        <div class="w2ui-group" style="height: 115px; width: 260px">
+          
+          <div class="w2ui-field w2ui-span4">
+            <label>Wunschbetrag</label>
+            <div>
+              <input name="idBaser" type="text" maxlength="50" size="20"/>
+            </div>
+          </div>
+          
+          <div class="w2ui-field w2ui-span4">
+              <label>Geb&uuml;hren</label>
+              <div>
+                  <input name="idFeer" type="text" maxlength="50" size="20"/>
+              </div>
+          </div>
+
+          <div class="w2ui-field w2ui-span4">
+              <label>Zahlbetrag</label>
+              <div>
+                  <input name="idTotalr" type="text" maxlength="50" size="20"/>
+              </div>
+          </div>
+
+        </div>
+
+    <div align="center"><a href="https://www.paypal.me/koehntopp" id="link" target="_blank"><img src="donate.png"></a></div>
+    <div align="center">Buy me a coffee</div>
+
+
+    </div>
+
+
+  </body>
+</html>
+
